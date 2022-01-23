@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="uppgift1Datalagring.Views.CustomersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:uppgift1Datalagring.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="700">
+    
+    <Grid Margin=" 19">
+        <Label Content=" Kunder" FontSize=" 19"/>
+        <Grid >
+            <Grid>
+                <StackPanel>
+                    <Button Content="Hämta kunder" Margin=" 8 35 8 345" Padding="5" x:Name="btnCustomerLista" Click="btnCustomerLista_Click"/>
+                </StackPanel> 
+            </Grid>
+
+            <ListView x:Name="lvCustomer" DataContext="uppgift1Datalagring.Models.Customer" Margin=" 9 80 9 9" HorizontalContentAlignment="Stretch">
+
+                <ListView.ItemTemplate> 
+
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding Name}"/>
+                            <TextBlock Grid.Column="1" Text="{Binding Email}"/>
+                            <TextBlock Grid.Column="2" Text="{Binding telefonummer}"/>
+                            <TextBlock Grid.Column="3" Text="{Binding Mobilenummer }"/>
+                            <TextBlock Grid.Column="4" Text="{Binding Arende }"/>
+                            <TextBlock Grid.Column="5" Text="{Binding  Adress  }"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="uppgift1Datalagring.Views.CreatCustomerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:uppgift1Datalagring.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Margin=" 19">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/> 
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            
+           
+        </Grid.RowDefinitions>
+        <Label Content=" Ny kund" FontSize="18"/> 
+        <Grid Grid.Row="1" >
+            <StackPanel Grid.Column="1" Margin=" 0 0 0 130">
+                <TextBlock Text="För-efternamn" />
+                <TextBox x:Name="tbNamn" Padding="5" Margin="0 0 9 10"  />
+        <TextBlock Text="Email"/>
+                <TextBox x:Name="tbEmail" Padding="5" Margin="0 0 9 10"/>
+                <TextBlock Text="Telefonummer"/>
+                <TextBox x:Name="tbTelefonummer" Padding="5" Margin="0 0 9 10"/> 
+                <TextBlock Text="MobileNummer"/>
+                <TextBox x:Name="tbMobilenummer" Padding="5" Margin="0 0 9 20"/> 
+
+            </StackPanel>
+        
+        </Grid>
+        <Label Content=" Adress" FontSize="18" Grid.Column="2"/>
+        <Grid Grid.Column="2" Grid.Row="1">
+            <StackPanel >
+                <TextBlock Text=" Gatuadress"/> 
+                <TextBox x:Name="tbGatuadress" Padding="5" Margin="0 0 0 10"/> 
+                <TextBlock Text="  Post nummer  "/>
+                <TextBox x:Name="tbPostNummer" Padding="5" Margin="0 0 0 10"/>
+                <TextBlock Text=" Stad  "/>
+                <TextBox x:Name="tbStad" Padding="5" Margin="0 0 0 10"/>
+                <TextBlock Text=" Land  "/>
+                <TextBox x:Name="tbLand" Padding="5" Margin="0 0 0 10"/>
+                <Button x:Name="btnCustomer" Content=" Lägg till" Padding="6"   Click="btnCustomer_Click"/>
+
+            </StackPanel>
+
+        </Grid>
+ 
+
+    </Grid>
+    
+</UserControl>

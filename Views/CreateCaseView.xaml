@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="uppgift1Datalagring.Views.CreateCaseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:uppgift1Datalagring.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="800">
+    <Grid Margin=" 19">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content=" Ny Ärende" FontSize="18"/> 
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <TextBlock Text="Kund"/>
+                <TextBox x:Name="tbKund" Padding="5" Margin="0 0 0 5"/>
+                <TextBlock Text="Rubrik för ärende"/>
+                <TextBox x:Name="tbRubrik" Padding="5" Margin="0 0 0 5"/>
+                <TextBlock Text="Beskrivning av ärendet"/>
+                <TextBox x:Name="tbBeskrivning"  Padding="5"  Margin="0 0 0 5"/>
+                <TextBlock Text="Datum då ärendet skapades"/>
+                <CalendarButton x:Name="tbDatum" Content="Dagens datum kommer att  registreras på ärendet" HorizontalContentAlignment="Left"  Padding="5" Margin="0 0 0 0"/>
+                <TextBlock Text="Datum då ärendet ändrades"/>
+                <CalendarButton x:Name="tbDatumChanged" Content="Så fort status på ärendet ändras då registreras datumet i ärendet" HorizontalContentAlignment="Left" Padding="3" Margin="0 0 0 0"/>
+                <TextBlock Text=" Satatus på ärendet "/>
+                <ComboBox x:Name="tbStatus" Padding="5" Margin="0 0 0 10">
+                    <TextBox Text="Registrerad"/>
+                    <TextBox Text="Pågående"/>
+                    <TextBox Text="Avslutad"/>
+                </ComboBox>
+               
+                <Button x:Name="btnArende" Content=" Lägg till" Padding="6" Click="btnArende_Click_1"/>
+
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

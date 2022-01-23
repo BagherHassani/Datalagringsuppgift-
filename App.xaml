@@ -1,0 +1,25 @@
+﻿<Application x:Class="uppgift1Datalagring.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:uppgift1Datalagring"
+             xmlns:viewModel="clr-namespace:uppgift1Datalagring.Models.VieModels"
+             xmlns:view="clr-namespace:uppgift1Datalagring.Views"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type viewModel:CustomersViewModel}">
+                <view:CustomersView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:CreateCustomerViewModel}">
+                <view:CreatCustomerView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:CasesViewModel}">
+                <view:CasesView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:CreateCaseViewModel}">
+                <view:CreateCaseView/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
